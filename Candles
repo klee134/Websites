@@ -1,0 +1,147 @@
+HTML
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="venus.css">
+    <script src="https://use.fontawesome.com/eccb53b598.js"></script>
+</head>
+<body>
+    <div class="SectionOne">
+        <div class="nav">
+
+            <div class="left">
+                <div class="icon" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <ul class="social">
+                    <li class="fa fa-instagram" aria-hidden="true"></li>
+                    <li class="fa fa-youtube-play" aria-hidden="true"></li>
+                </ul>
+            </div>
+    
+            <div class="free">Free shipping on purchase over $50</div>
+            <div class="cart">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="SectionTwo">
+        <div class="img">
+            <img src="/Img/candle1.png" alt="">
+        </div>
+        <div class="descTwo">
+            <h2>Shop our Fall Collection</h2>
+        </div>
+    </div>
+</body>
+<script src="venus.js"></script>
+</html>
+
+** CSS **
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Hamburger menu icon */
+
+.icon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* Nav */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px 20px;
+}
+
+.left {
+    display: flex;
+    color: white;
+    padding-left: 20px;
+}
+
+.social li {
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+
+.free {
+    text-align: left;
+    color: white;
+    font-size: 25px;
+}
+
+.cart {
+    color: white;
+    font-size: 25px;
+    padding-right: 20px;
+}
+
+/* SectionTwo */
+
+.img {
+    position: relative;
+}
+
+.img > img {
+    width: 100%;
+    height: auto;
+}
+
+div.descTwo {
+    background-color: #ffffff;
+    height: 15rem;
+    width: 35rem;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    opacity: 0.6;
+}
+
+div.descTwo h2 {
+    text-align: center;
+    color: black;
+}
+
+** JS **
+
+function myFunction(x) {
+    x.classList.toggle("change");
+  }
+
+
